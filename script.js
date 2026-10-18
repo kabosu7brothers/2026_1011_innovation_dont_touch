@@ -72,7 +72,7 @@ async function addAnimal(event) {
     showMessage("登録中...");
 
     const { error } = await supabaseClient
-        .from("animal")
+        .from("yukino")
         .insert({
             name: name,
             area: area,
