@@ -74,7 +74,6 @@ async function addAnimal(event) {
     const { error } = await supabaseClient
         .from("yukino")
         .insert({
-            id: 3,
             name: name,
             area: area,
             description: description || null
