@@ -23,6 +23,7 @@ async function loadAnimals() {
     if (error) {//エラーが出たら？
         console.error(error);
         alert("データ取得に失敗しました: " + error.message);
+        console.log(data)
         return;
     }
 
