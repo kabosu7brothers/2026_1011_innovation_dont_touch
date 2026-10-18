@@ -59,7 +59,7 @@ async function loadAnimals() {
 async function addAnimal(event) {
     event.preventDefault(); // ページの再読み込みを防ぐ
 
-    const name = document.getElementById("nameInput").value.trim();
+    const id = document.getElementById("nameInput").value.trim();
     const area = document.getElementById("areaInput").value.trim();
     const description = document.getElementById("descriptionInput").value.trim();
 
@@ -74,6 +74,7 @@ async function addAnimal(event) {
     const { error } = await supabaseClient
         .from("yukino")
         .insert({
+            id: 3,
             name: name,
             area: area,
             description: description || null
