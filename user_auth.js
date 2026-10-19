@@ -5,7 +5,7 @@ const supabaseClient = window.supabase.createClient(SUPABASE_URL, ANON_KEY);
 
 //ユーザー登録
 async function signUp(email, password) {
-  const { data, error } = await supabase.auth.signUp({
+  const { data, error } = await supabaseClient.auth.signUp({
     email,
     password,
   })
@@ -18,7 +18,7 @@ async function signUp(email, password) {
 }
 //ユーザーログイン処理
 async function signIn(email, password) {
-  const { data, error } = await supabase.auth.signInWithPassword({
+  const { data, error } = await supabaseClient.auth.signInWithPassword({
     email,
     password,
   })
@@ -37,6 +37,6 @@ async function signInWithGoogle() {
 }
 //ログアウト
 async function signOut() {
-  const { error } = await supabase.auth.signOut()
+  const { error } = await supabaseClient.auth.signOut()
   if (error) console.error('ログアウトエラー:', error.message)
 }
