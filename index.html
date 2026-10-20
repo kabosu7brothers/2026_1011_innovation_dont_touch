@@ -14,19 +14,16 @@
     </header>
     <main>
         <a href="./view.html">出力画面へ</a>
-        <h2>生物を登録する</h2>
-        <form id="animalForm"><!入力フォーム>
+        <a href=./input.html>入力画面へ</a>
+        <h2>ユーザー登録・ログイン</h2>
+        <form id="userlogin"><!入力フォーム>
             <label>
                 名前(必須)
-                <input type="text" id="nameInput" required><!テキスト入力欄。requiredで入力必須にできる>
+                <input type="text" id="usernameIn" required><!テキスト入力欄。requiredで入力必須にできる>
             </label>
             <label>
-                地域(必須)
-                <input type="text" id="areaInput" required><!テキスト入力欄。requiredで入力必須にできる>
-            </label>
-            <label>
-                説明
-                <textarea id="descriptionInput" rows="3"></textarea><!長文テキスト入力欄。rows=行数。>
+                パスワード(必須)
+                <input type="text" id="pass" required><!テキスト入力欄。requiredで入力必須にできる>
             </label>
             <button type="submit" id="submitButton">登録する</button>
             <p id="message"></p><!id=メッセージとして登録された文字が表示される>
