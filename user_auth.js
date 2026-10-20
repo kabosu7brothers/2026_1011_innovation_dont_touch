@@ -29,12 +29,7 @@ async function signIn(email, password) {
     console.log('ログイン成功:', data.user)
   }
 }
-//グーグルによる外部ログイン
-async function signInWithGoogle() {
-  const { data, error } = await supabase.auth.signInWithOAuth({
-    provider: 'google',
-  })
-}
+
 //ログアウト
 async function signOut() {
   const { error } = await supabaseClient.auth.signOut()
