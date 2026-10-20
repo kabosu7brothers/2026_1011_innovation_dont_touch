@@ -39,7 +39,7 @@ async function signIn(email, password) {
   } else {
     console.log('ログイン成功:', data.user);
     alert('ログインに成功しました！');
-    window.location.href = 'dashboard.html'; // 任意の後続ページへ遷移
+    window.location.href = 'index.html'; // 任意の後続ページへ遷移
   }
 }
 
